@@ -45,8 +45,11 @@
     .div34 { grid-area: 7 / 3 / 8 / 4; }
     .div35 { grid-area: 7 / 4 / 8 / 5; }
     .div36 { grid-area: 7 / 5 / 8 / 6; }
-    .div37 { grid-area: 7 / 6 / 8 / 7; }
+    /* .div37 { grid-area: 7 / 6 / 8 / 7; } */
 
 bg-black{
-    
+    background-color: black;
+}
+bg-blue{
+    background-color: blue;
 }
