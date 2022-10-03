@@ -10,7 +10,7 @@ botonesNumeros.forEach(boton => {
     boton.addEventListener('click', () => display.agregarNumero(boton.innerHTML));
 });
 
-// nueva
+// <!-- Esto quiero inventar  -->
 botonesNumerosEspeciales.forEach(boton => {
     boton.addEventListener('click', () => display.agregarNumero(boton.value));
 });
