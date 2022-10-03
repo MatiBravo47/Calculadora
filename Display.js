@@ -43,7 +43,15 @@ class Display {
         // si es un punto y ya contenia uno, no hace nada
         if(numero === '.' && this.valorActual.includes('.')) return
         //sino
-        this.valorActual = this.valorActual.toString() + numero.toString();
+        if (numero === 'π'){
+            if (this.valorActual.toString() === ''){
+                this.valorActual = this.valorActual.toString() + Math.PI.toString();
+            }else{
+                this.valorActual = this.valorActual.toString() * Math.PI.toString();
+            }
+        }else{
+            this.valorActual = this.valorActual.toString() + numero.toString();
+        }
         this.imprimirValores();
     }
 
