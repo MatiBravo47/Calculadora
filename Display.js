@@ -49,8 +49,41 @@ class Display {
             }else{
                 this.valorActual = this.valorActual.toString() * Math.PI.toString();
             }
+        }
+        else if (numero === 'e'){
+                if (this.valorActual.toString() === ''){
+                    this.valorActual = this.valorActual.toString() + Math.E.toString();
+                }else{
+                    this.valorActual = this.valorActual.toString() * Math.E.toString();
+                }
+        }else if (this.valorActual.toString() === 'tg'){
+            this.valorActual = Math.tan(numero).toString()
+        }else if (this.valorActual.toString() === 'sin'){
+            this.valorActual = Math.sin(numero).toString()
+        }else if (this.valorActual.toString() === 'cos'){
+            this.valorActual = Math.tan(numero).toString()
+        }else if (this.valorActual.toString() === '∛'){
+            this.valorActual = Math.pow(numero,1/3).toString()
+        }else if (this.valorActual.toString() === '√'){
+            this.valorActual = Math.pow(numero,1/2).toString()
+        // }else if (this.valorActual.toString() === 'ln'){
+        //     this.valorActual = Math.LN10(numero).toString()    
         }else{
             this.valorActual = this.valorActual.toString() + numero.toString();
+        }
+        this.imprimirValores();
+    }
+
+    agregarFuncion(funcion) {
+        // si es un punto y ya contenia uno, no hace nada
+        if(funcion === '.' && this.valorActual.includes('.')) return
+        //sino
+        else if (!isNaN(this.valorActual) && funcion == '^2'){
+            this.valorActual = Math.pow(this.valorActual.toString(),2).toString()
+        }else if (!isNaN(this.valorActual) && funcion == '^3'){
+            this.valorActual = Math.pow(this.valorActual.toString(),3).toString()
+        }else{
+            this.valorActual = this.valorActual.toString() + funcion.toString();
         }
         this.imprimirValores();
     }
