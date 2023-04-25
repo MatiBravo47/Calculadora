@@ -7,3 +7,10 @@ Tecnologías:
 - HTML
 - Css
 - JavaScript
+
+```bash
+git clone https://github.com/MatiBravo47/TATETI.git
+cd TATETI
+npm install
+npm start
+```
